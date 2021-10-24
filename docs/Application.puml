@@ -5,12 +5,30 @@ class Application {
 + void start()
 }
 
+class TodoList {
+-String title
+-List<Item> itemList
+
++ TodoList(String title)
++ TodoList(String title, List<Item> itemList)
++ void addItem(Item item)
++ void updateItem(Item prevItem, Item newItem)
++ void removeItem(Item item)
++ List<Item> getItemList()
++ List<Item> getComplete()
++ List<Item> getIncomplete()
++ List<Item> getSortedByDate()
++ setTitle(String title)
++ String getTitle()
+}
+
 class Item {
 -String title
 -String description
 -Boolean isComplete
 -LocalDate dueDate
 
++ Item(String title, String description, Boolean isComplete, LocalDate dueDate)
 + String getTitle()
 + void setTitle(String title)
 + String getDescription()
@@ -23,4 +41,6 @@ class Item {
 }
 
 javafx.Application <|-- Application
+TodoList -- Item
+
 @enduml

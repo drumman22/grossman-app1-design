@@ -13,11 +13,7 @@ public class Item {
     private Boolean isComplete;
     private LocalDate dueDate;
 
-    Item(String title, String description, LocalDate dueDate) {
-        // Default isComplete to false
-    }
-
-    Item(String title, String description, Boolean isComplete, LocalDate dueDate) {
+    public Item(String title, String description, Boolean isComplete, LocalDate dueDate) {
         // Set values
     }
 
