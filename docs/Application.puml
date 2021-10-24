@@ -1,2 +1,26 @@
 @startuml
+
+class Application {
++ void main()
++ void start()
+}
+
+class Item {
+-String title
+-String description
+-Boolean isComplete
+-LocalDate dueDate
+
++ String getTitle()
++ void setTitle(String title)
++ String getDescription()
++ void setDescription(String description)
++ Boolean getComplete()
++ void setComplete(Boolean complete)
++ LocalDate getDueDate()
++ void setDueDate(LocalDate dueDate)
++ String getFormattedDueDate()
+}
+
+javafx.Application <|-- Application
 @enduml
