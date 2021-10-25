@@ -40,7 +40,62 @@ class Item {
 + String getFormattedDueDate()
 }
 
-javafx.Application <|-- Application
+class SceneSwitcher {
+-static Stage stage
+-static Scene scene
+-static Parent root
+
+static void switchItemList(ActionEvent event)
+static void switchTodoList(ActionEvent event)
+}
+
+class ItemListController {
+-SceneSwitcher sceneSwitcher
+-TodoList todolist
+-TableView itemsTableView
+-TableColumn titleColumn
+-TableColumn dueDateColumn
+-TableColumn statusColumn
+-TextField titleTextField
+-TextArea descriptionTextArea
+-DatePicker dueDatePicker
+-Checkbox isCompleteCheckBox
+
++ void initalizeScene(TodoList todoList)
++ void updateTableView()
++ void updateItemView(Item item)
++ void addItem()
++ void removeSelectedItem()
++ void updateSelectedItem()
++ void onItemSelection()
+}
+
+class TodoListsController {
+-SceneSwitcher sceneSwitcher
+-List<TodoList> todoLists
+-TableView todoTableView
+-TableColumn titleColumn
+-TableColumn itemAmountColumn
+-TableColumn completedAmountColumn
+-TableColumn incompletedAmountColumnlumn
+-TextField listTitleTextField
+
++ void initialize(URL location, ResourceBundle resources)
++ void loadTodoLists()
++ void updateTableView()
++ void updateItemView(Item item)
++ void addItem()
++ void removeSelectedItem()
++ void updateSelectedItem()
++ void onItemSelection()
+}
+
+TodoListsController -- SceneSwitcher
+ItemListController -- SceneSwitcher
+Application -- SceneSwitcher
 TodoList -- Item
+TodoList -- TodoListsController
+TodoList -- ItemListController
+javafx.Application <|-- Application
 
 @enduml
