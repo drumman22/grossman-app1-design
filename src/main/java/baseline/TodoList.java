@@ -63,4 +63,9 @@ public class TodoList {
         // return title
         return ""; // temp return
     }
+
+    public int getSize() {
+        // get size of itemList
+        return 0;
+    }
 }
