@@ -16,9 +16,10 @@ public class Application extends javafx.application.Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TodoListViewer.fxml")));
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

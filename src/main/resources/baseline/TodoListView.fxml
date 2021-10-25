@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="686.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Load" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Load">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.6242690058479532" layoutY="25.0" prefHeight="442.0" prefWidth="686.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="440.0" prefWidth="450.0">
+               <children>
+                  <TableView fx:id="todoTableView" prefHeight="440.0" prefWidth="423.0">
+                    <columns>
+                      <TableColumn fx:id="titleTodoList" editable="false" prefWidth="136.0" text="Todo List" />
+                      <TableColumn fx:id="itemAmountColumn" editable="false" minWidth="0.0" prefWidth="95.0" text="Tasks Amount" />
+                        <TableColumn fx:id="completedAmountColumn" prefWidth="97.0" text="Completed" />
+                        <TableColumn fx:id="incompletedAmountColumn" prefWidth="92.0" text="Incompleted" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="390.0" prefWidth="141.0">
+               <children>
+                  <GridPane alignment="CENTER" layoutX="3.0" layoutY="2.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="421.0" prefWidth="247.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                       <rowConstraints>
+                        <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="96.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="125.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="226.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="226.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="listTitleTextField" alignment="CENTER" prefHeight="51.0" prefWidth="247.0" promptText="Todo List Name" GridPane.rowIndex="3" />
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="189.0" text="Add" />
+                              <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="164.0" text="Remove" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="267.0" text="Update" GridPane.rowIndex="1" />
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="97.0" prefWidth="247.0" text="Open Todo List" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
