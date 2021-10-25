@@ -45,8 +45,8 @@ class SceneSwitcher {
 -static Scene scene
 -static Parent root
 
-static void switchItemList(ActionEvent event)
-static void switchTodoList(ActionEvent event)
++ static void switchItemList(ActionEvent event)
++ tatic void switchTodoList(ActionEvent event)
 }
 
 class ItemListController {
