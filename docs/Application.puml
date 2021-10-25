@@ -20,6 +20,7 @@ class TodoList {
 + List<Item> getSortedByDate()
 + setTitle(String title)
 + String getTitle()
++ int getSize()
 }
 
 class Item {
